@@ -7,7 +7,7 @@ const port = 3010;
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
-  res.sendFile(resolve(__dirname, 'pages/index.html'));
+  res.sendFile(resolve(__dirname, 'index.html'));
 });
 
 // function to handle user signup
@@ -37,6 +37,9 @@ app.post('/validate', (req, res) => {
 
   res.status(200).send('Data is valid');
 });
+
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
